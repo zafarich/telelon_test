@@ -1,1 +1,36 @@
 // app global css in SCSS form
+
+.q-btn {
+  &:before {
+    box-shadow: none;
+  }
+  &:not(.q-btn--dense) {
+    min-height: 2.8em;
+  }
+  &--dense:not(.q-btn--rounded):not(.q-btn--round) {
+    padding-left: 0.6em;
+    padding-right: 0.6em;
+    border-radius: 6px;
+  }
+  &:not(.q-btn--push) {
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  &--rectangle {
+    border-radius: 4px;
+  }
+  &.btn-link {
+    padding: 0;
+    background: transparent;
+    min-height: auto;
+    &:before,
+    .q-focus-helper {
+      background: transparent !important;
+      opacity: 0 !important;
+    }
+    .q-btn__content {
+      display: block;
+    }
+  }
+}
